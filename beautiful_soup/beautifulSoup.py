@@ -19,5 +19,9 @@ print(soup.prettify()) #The prettiffy function when called, returns a Unicoded s
 
 #Instead of printing, this time we shall wrrite it inside a file
 
-with open('/home/queen/Web_scrapping/pettified.html', 'w', encoding='UTF-8') as f:
-    f.write(soup.prettify())
+try:
+    with open('/home/queen/Web_scrapping/pettified.html', 'w', encoding='UTF-8') as f:
+        f.write(soup.prettify())
+        print('success') #Logging if it was saved
+except Exception as e:
+    print(e)
